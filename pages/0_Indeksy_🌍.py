@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.set_page_config(layout="wide", page_title="Indeksy 🌍 | OdrApp 💦")
+st.set_page_config(page_title="Indeksy 🌍 | OdrApp 💦")
 
 st.markdown("""
 <style>
