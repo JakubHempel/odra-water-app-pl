@@ -2,6 +2,14 @@ import streamlit as st
 
 st.set_page_config(layout="wide", page_title="📃 Strona główna | OdrApp 💦")
 
+st.markdown("""
+<style>
+.align-text {
+    text-align: justify;
+}
+</style>
+""", unsafe_allow_html=True)
+
 # Customize page title
 st.title(
     "Witaj w OdrApp! 💦"
@@ -9,8 +17,8 @@ st.title(
 
 st.markdown(
     """
-    ***OdrApp*** to aplikacja służąca do monitoringu jakości wody w rzece Odra. Przedstawia ona wieloczasową analiza jakości wody z wykorzystaniem zobrazowań satelitarnych i Google Earth Engine. Obejmuje okres od 2018 do teraz, od kwietnia do października.\n
-    Eksploruj wszystkie strony do woli i dowiedz się więcej o zanieczyszczeniu wody w Odrze.
+    <p class="align-text"> <i>OdrApp</i> to aplikacja służąca do monitoringu jakości wody w rzece Odra. Przedstawia ona wieloczasową analiza jakości wody z wykorzystaniem zobrazowań satelitarnych i Google Earth Engine. Obejmuje okres od 2018 do teraz, od kwietnia do października.\n
+    Eksploruj wszystkie strony do woli i dowiedz się więcej o zanieczyszczeniu wody w Odrze.</p>
     """)
 
 st.divider()
