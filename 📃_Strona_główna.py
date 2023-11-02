@@ -19,7 +19,7 @@ st.markdown(
     """
     <p class="align-text"> <i>OdrApp</i> to aplikacja służąca do monitoringu jakości wody w rzece Odra. Przedstawia ona wieloczasową analiza jakości wody z wykorzystaniem zobrazowań satelitarnych i Google Earth Engine. Obejmuje okres od 2018 do teraz, od kwietnia do października.\n
     Eksploruj wszystkie strony do woli i dowiedz się więcej o zanieczyszczeniu wody w Odrze.</p>
-    """)
+    """, unsafe_allow_html=True)
 
 st.divider()
 
