@@ -24,11 +24,11 @@ li {
 
 st.title("Indeksy spektralne")
 st.subheader("\n")
-st.markdown("""<p class="align-text"> Zobrazowania satelitarne pochodzą z satelity Sentinel-2 Level-2A. Są to multispektralne zdjecia o wysokiej rozdzielczości przestrzennej - 10 metrów (Google Earth Engine Data Catalog 2023) pochodzące z misji przeprowadzanej przez Europejską Agencję Kosmiczną - ESA.
+st.markdown("""<p class="align-text"> Zobrazowania satelitarne pochodzą z satelity Sentinel-2 Level-2A. Są to multispektralne zdjęcia o wysokiej rozdzielczości przestrzennej - 10 metrów (Google Earth Engine Data Catalog 2023) pochodzące z misji przeprowadzanej przez Europejską Agencję Kosmiczną - ESA.
 \n *Podane poniżej wzory indeksów oraz długości fal centralnych oparte są na kanałach satelity z [Sentinel Online User Guide](https://sentinels.copernicus.eu/web/sentinel/user-guides/sentinel-2-msi/resolutions/spectral).*</p>""", unsafe_allow_html=True)
 st.divider()
 
-st.markdown("""<p class="align-text"> <span class="index-font-1"> <b>NDWI</b> (<i>Normalized Difference Water Index</i>)</span> - stosowany jest do detekcji wody na obrazach satelitarnych. Wartości NDWI powyżej zera reprezentują wodę, natomiast wartości mniejsze lub równe zero wskazują na tereny bez występowania wody (McFeeters 1996). Na zdjęciu satelitarnym jest wiele pikseli, które są złożone z wody ale również z roślinności oraz rzucanej przez niej cienia, dlatego wartości indeksu mogą różnić się od idealnego stanu, wskazującego występowanie wody. Równanie opiera się na kanałach spektralncyh, których środkowe długości fal wynoszą dla pasma zielonego (Green - B3) - 560 nm i dla NIR (B8) - 832 nm.</p>""", unsafe_allow_html=True)
+st.markdown("""<p class="align-text"> <span class="index-font-1"> <b>NDWI</b> (<i>Normalized Difference Water Index</i>)</span> - stosowany jest do detekcji wody na obrazach satelitarnych. Wartości NDWI powyżej zera reprezentują wodę, natomiast wartości mniejsze lub równe zero wskazują na tereny bez występowania wody (McFeeters 1996). Na zdjęciu satelitarnym jest wiele pikseli, które są złożone z wody ale również z roślinności oraz rzucanej przez niej cienia, dlatego wartości indeksu mogą różnić się od idealnego stanu, wskazującego występowanie wody. Równanie opiera się na kanałach spektralnych, których środkowe długości fal wynoszą dla pasma zielonego (Green - B3) - 560 nm i dla NIR (B8) - 832 nm.</p>""", unsafe_allow_html=True)
 st.latex(r'''NDWI = \frac{Green - NIR}{Green + NIR} = \frac{B3 - B8}{B3 + B8}''')
 st.divider()
 
@@ -40,7 +40,7 @@ st.markdown("""<p class="align-text"> <span class="index-font-1"> <b>NDSI</b> (<
 st.latex(r'''NDSI = \frac{Red - NIR}{Red + NIR} = \frac{B4 - B8}{B4 + B8}''')
 st.divider()
 
-st.markdown("""<p class="align-text"> <span class="index-font-2"> <b>SABI</b> (<i>Surface Algal Bloom Index</i>)</span> - został opracowany przez (Alawadi 2010) w celu identyfikacji obecności biomasy w wodzie przy użyciu pasma NIR, które jest wrażliwe na rośliny zielone, pasma niebieskiego (Blue), reagującego na czystą wodę, i pasma zielonego (Green), które wykreywa zakwity glonów w wodzie. Zjawisko zakwitu glonów występuje najczęściej, gdy istnieją odpowiednie warunki nasłonecznienia, wysoka temperatura wody i wysoki poziom składników odżywczych. Co więcej, wody wysoce eutroficzne mogą pomóc w żerowaniu glonów ze względu na wysoką zawartość azotu i fosforu (Caballeto et al. 2020). Zakres wartości wskaźnika dla wody wynosi od -0.1 do 0, a dla mikroalg poniżej lub równo -0.2 (Kulawiak 2016).</p>""", unsafe_allow_html=True)
+st.markdown("""<p class="align-text"> <span class="index-font-2"> <b>SABI</b> (<i>Surface Algal Bloom Index</i>)</span> - został opracowany przez (Alawadi 2010) w celu identyfikacji obecności biomasy w wodzie przy użyciu pasma NIR, które jest wrażliwe na rośliny zielone, pasma niebieskiego (Blue), reagującego na czystą wodę, i pasma zielonego (Green), które wykrywa zakwity glonów w wodzie. Zjawisko zakwitu glonów występuje najczęściej, gdy istnieją odpowiednie warunki nasłonecznienia, wysoka temperatura wody i wysoki poziom składników odżywczych. Co więcej, wody wysoce eutroficzne mogą pomóc w żerowaniu glonów ze względu na wysoką zawartość azotu i fosforu (Caballeto et al. 2020). Zakres wartości wskaźnika dla wody wynosi od -0.1 do 0, a dla mikroalg poniżej lub równo -0.2 (Kulawiak 2016).</p>""", unsafe_allow_html=True)
 st.latex(r'''SABI = \frac{NIR - Red}{Blue + Green} = \frac{B8 - B4}{B2 + B3}''')
 st.divider()
 
@@ -61,7 +61,7 @@ st.markdown("""<p class="align-text"> <span class="index-font-2"><b>Cyanobacteri
 st.latex(r'''Cyanobacteria = 115530.31 \cdot \left(\frac{Green \cdot Red}{Blue}\right)^{2.38} = 115530.31 \cdot \left(\frac{B3 \cdot B4}{B2}\right)^{2.38}''')
 st.divider()
 
-st.markdown("""<p class="align-text"> <span class="index-font-2"><b>Turbidity</b></span> - to zmiejszczenie przejrzystości wody na skutek obecności zawiesien pochłaniających lub rozpraszających światło. Poza wpływem na jakość wizualną rzek i zbiorników rekreacyjnych, przezroczystość wody wpływa na zmiany w ilości światła dochodzącego do różnych głębokości, co wpływa na proces fotosyntezy (Izagirre et al. 2009). Poniższy wzór został przekształcony na potrzeby Sentinel-2 na podstawie algorytmów stworzonych przez Potesa et al. (2011, 2012).</p>""", unsafe_allow_html=True)
+st.markdown("""<p class="align-text"> <span class="index-font-2"><b>Turbidity</b></span> - to zmiejszczenie przejrzystości wody na skutek obecności zawiesin pochłaniających lub rozpraszających światło. Poza wpływem na jakość wizualną rzek i zbiorników rekreacyjnych, przezroczystość wody wpływa na zmiany w ilości światła dochodzącego do różnych głębokości, co wpływa na proces fotosyntezy (Izagirre et al. 2009). Poniższy wzór został przekształcony na potrzeby Sentinel-2 na podstawie algorytmów stworzonych przez Potesa et al. (2011, 2012).</p>""", unsafe_allow_html=True)
 st.latex(r'''Turbidity = 8.93 \cdot \left(\frac{Green}{Ultra Blue}\right) - 6.39 = 8.93 \cdot \left(\frac{B3}{B1}\right) - 6.39''')
 st.divider()
 
