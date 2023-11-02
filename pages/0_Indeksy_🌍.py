@@ -7,12 +7,10 @@ st.markdown("""
 .index-font-1 {
     font-size: 17px;
     color: #20B2AA;
-    font-weight: bold;
 }
 .index-font-2 {
     font-size: 17px;
     color: #B6D79A;    
-    font-weight: bold;
 }
 .align-text {
     text-align: justify;
