@@ -39,4 +39,3 @@ pois = {
     "Frankfurt": frankfurt_points,
     "Szczecin": szczecin_points,
 }
-
