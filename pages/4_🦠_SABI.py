@@ -67,8 +67,8 @@ with tab2:
     col1, col2 = st.columns((3, 1))
     with st.container():
         with col1:
-            st.subheader(f"{index_name} - wykres liniowy")
-            st.line_chart(get_stats_cache()[index_name]["mean"], color="#20B2AA")
+            st.subheader(f"{index_name} wykres liniowy")
+            st.line_chart(get_stats_cache()[index_name])
         with col2:
             st.subheader("Dane")
             st.write(get_stats_cache()[index_name])
