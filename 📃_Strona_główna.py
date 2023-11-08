@@ -29,7 +29,7 @@ st.markdown("""
     2. Odwiedzaj strony indeksów:
         - 💦 - powszechnie stosowane wskaźniki,
         - 🦠 - związane stricte z zanieczyszczeniem i jakością wody.\n
-        Przeglądaj mapy z wizualizacją indeksów w zakładce 🗺️ Mapa i wykres liniowy przedstawiający średnią wartość indeksów na przestrzeni analizowanego okresu w zakładce 📈 Wykres.
+        Przeglądaj mapy z wizualizacją indeksów w zakładce 🗺️ Mapa i wykres liniowy przedstawiający średnią wartość i medianę wartości indeksów na przestrzeni analizowanego okresu w zakładce 📈 Wykres.
     3. Wejdź na stronę *Wykresy* 📈 gdzie poznasz wizualizację wyników na wykresach, tj.
         - "roczne",
         - "miesięczne",
